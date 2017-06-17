@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  p.titling1
+    strong MrUnk's RESTful API TimeStamp
+  p.titling2 
+    strong Conditions: 
+
+  ul.mar1
+    li String can be passed as a parameter and is checked to see if it is a unix timestamp or natural language date (example: December 15, 2015 )
+    li If it does, it returns both the Unix timestamp and the natural language form of that date
+    li If it does not contain a date or Unix timestamp, it returns null for those properties
+  
+  p.titling2 
+    strong Example Usage: 
+
+  ul.mar2
+    li.mar3 localhost:3000/December 15, 2015
+    li.mar3 localhost:3000/1450108800
+
+  p.titling2 
+    strong Example Output: 
+
+  ul.mar2 
+    li.mar3 {"unix": 1450108800,"natural":"December 15, 2015"}
